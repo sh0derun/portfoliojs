@@ -105,7 +105,7 @@ Options:
 
 As you see `--file-path` option is required to specify csv file path but the other options are optional.
 
-Lastly this is an exampleif you provide all options:
+Lastly this is an example if you provide all options:
 ```sh
 node . --file-path=./res/transactions.csv --token=BTC --date=2019-10-25
 ```
@@ -119,6 +119,20 @@ this is result:
 ```sh
 ✔ latest portfolio value for BTC : 218826.640407
 ```
+
+Sample from the csv file :
+```csv
+timestamp,transaction_type,token,amount
+1571967208,DEPOSIT,BTC,0.298660
+1571967200,DEPOSIT,ETH,0.683640
+1571967189,WITHDRAWAL,ETH,0.493839
+```
+
+The csv file has the following columns
+ - timestamp: Integer number of seconds since the Epoch
+ - transaction_type: Either a DEPOSIT or a WITHDRAWAL
+ - token: The token symbol
+ - amount: The amount transacted
 
 You can get csv file `transactions.csv` used in the example from [transactions.csv](https://s3-ap-southeast-1.amazonaws.com/static.propine.com/transactions.csv.zip) note that it's a very large file, its size is about 1GB.
 
