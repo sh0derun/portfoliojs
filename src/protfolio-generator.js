@@ -2,7 +2,6 @@ import chalk from "chalk";
 import yargs from "yargs"
 import fs from "fs"
 import {createSpinner} from "nanospinner" 
-import Token from "./token.js";
 import Currency from "./currency.js";
 import TransactionType from "./transaction-type.js";
 import Messages from "./messages.js";
@@ -93,7 +92,7 @@ function handleChunk(line, separator = ",") {
 
 export function handleArgs(processArgv){
     return yargs(processArgv)
-            .usage(chalk.blue("Usage: portfoliojs ")+chalk.yellow("[option=...]"))
+            .usage(chalk.blue("Usage: portfoliogen ")+chalk.yellow("[option=...]"))
             .options({
                 "file-path":{
                     alias:"p", 
